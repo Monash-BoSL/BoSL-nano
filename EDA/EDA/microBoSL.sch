@@ -4,9 +4,9 @@ EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
-Title "Monash BoSL Board"
-Date "2020-11-27"
-Rev "0.4.2"
+Title "microBoSL"
+Date "2020-12-02"
+Rev "0.1.0"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -163,7 +163,7 @@ U 1 1 5CE61DD3
 P 4000 5200
 F 0 "R1" V 4080 5200 50  0000 C CNN
 F 1 "10 kΩ" V 3900 5200 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 3930 5200 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3930 5200 50  0001 C CNN
 F 3 "" H 4000 5200 50  0000 C CNN
 	1    4000 5200
 	0    1    1    0   
@@ -193,7 +193,7 @@ U 1 1 5CE64EC9
 P 4150 4150
 F 0 "C2" H 4175 4250 50  0000 L CNN
 F 1 "22 pF" H 4175 4050 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 4188 4000 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4188 4000 50  0001 C CNN
 F 3 "" H 4150 4150 50  0000 C CNN
 	1    4150 4150
 	1    0    0    -1  
@@ -215,7 +215,7 @@ U 1 1 5CE65174
 P 4850 4400
 F 0 "C3" H 4875 4500 50  0000 L CNN
 F 1 "22 pF" H 4875 4300 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 4888 4250 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4888 4250 50  0001 C CNN
 F 3 "" H 4850 4400 50  0000 C CNN
 	1    4850 4400
 	0    1    1    0   
@@ -259,7 +259,7 @@ U 1 1 5CE66F55
 P 8050 5100
 F 0 "C4" H 8075 5200 50  0000 L CNN
 F 1 "220 pF" H 8075 5000 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 8088 4950 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8088 4950 50  0001 C CNN
 F 3 "" H 8050 5100 50  0000 C CNN
 	1    8050 5100
 	-1   0    0    1   
@@ -290,24 +290,12 @@ F 3 "" H 8550 6100 50  0000 C CNN
 $EndComp
 NoConn ~ 8650 4200
 NoConn ~ 6550 2350
-Text GLabel 1750 7250 0    60   Input ~ 0
-TLL_TX
-Text GLabel 1750 7150 0    60   Input ~ 0
-TLL_RX
-Text GLabel 1750 7050 0    60   Input ~ 0
-TLL_RST
 Text GLabel 3500 4600 2    60   Input ~ 0
 A0
-Text GLabel 1700 8800 0    60   Input ~ 0
-V_3.3
 Text GLabel 3500 5000 2    60   Input ~ 0
 SDA
 Text GLabel 3500 5100 2    60   Input ~ 0
 SCL
-Text GLabel 1700 8500 0    60   Input ~ 0
-SCL
-Text GLabel 1700 8600 0    60   Input ~ 0
-SDA
 Text GLabel 3500 4700 2    60   Input ~ 0
 A1
 Text GLabel 3500 4800 2    60   Input ~ 0
@@ -472,28 +460,6 @@ F 3 "" H 7550 4200 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR06
-U 1 1 5CF10EF3
-P 1700 8700
-F 0 "#PWR06" H 1700 8450 50  0001 C CNN
-F 1 "GND" H 1700 8550 50  0000 C CNN
-F 2 "" H 1700 8700 50  0000 C CNN
-F 3 "" H 1700 8700 50  0000 C CNN
-	1    1700 8700
-	0    1    1    0   
-$EndComp
-$Comp
-L SIM7000-rescue:CONN_01X04-SIM7000-rescue P3
-U 1 1 5CF14CF2
-P 1900 8650
-F 0 "P3" H 1900 8900 50  0000 C CNN
-F 1 "CONN_01X04" V 2000 8650 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1900 8650 50  0001 C CNN
-F 3 "" H 1900 8650 50  0000 C CNN
-	1    1900 8650
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR02
 U 1 1 5CF1A29C
 P 900 5000
@@ -579,28 +545,6 @@ SD_Card
 Text Label 3900 3700 0    60   ~ 0
 ATMEGA328P
 $Comp
-L SIM7000-rescue:CONN_01X04-SIM7000-rescue P4
-U 1 1 5D397555
-P 1950 7100
-F 0 "P4" H 1950 7350 50  0000 C CNN
-F 1 "CONN_01X04" V 2050 7100 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1950 7100 50  0001 C CNN
-F 3 "" H 1950 7100 50  0000 C CNN
-	1    1950 7100
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR08
-U 1 1 5D397783
-P 1750 6950
-F 0 "#PWR08" H 1750 6700 50  0001 C CNN
-F 1 "GND" H 1750 6800 50  0000 C CNN
-F 2 "" H 1750 6950 50  0000 C CNN
-F 3 "" H 1750 6950 50  0000 C CNN
-	1    1750 6950
-	0    1    1    0   
-$EndComp
-$Comp
 L SIM7000-rescue:MSQA6V1W5T2G-simcom U3
 U 1 1 5D39A194
 P 8550 5750
@@ -616,77 +560,6 @@ D7
 Text GLabel 3500 5600 2    60   Input ~ 0
 D2
 Text GLabel 2300 3700 0    60   Input ~ 0
-AREF
-$Comp
-L SIM7000-rescue:Screw_Terminal_1x06-SIM7000-rescue J1
-U 1 1 5D3A70FC
-P 1100 9800
-F 0 "J1" H 1100 10450 50  0000 C TNN
-F 1 "Screw_Terminal_1x06" V 950 9800 50  0000 C TNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-6-3.5-H_1x06_P3.50mm_Horizontal" H 1100 9175 50  0001 C CNN
-F 3 "" H 1075 10200 50  0001 C CNN
-	1    1100 9800
-	-1   0    0    1   
-$EndComp
-Text GLabel 900  9300 0    60   Input ~ 0
-SCL
-Text GLabel 900  9500 0    60   Input ~ 0
-SDA
-Text GLabel 900  9700 0    60   Input ~ 0
-A3
-Text GLabel 900  9900 0    60   Input ~ 0
-A2
-Text GLabel 900  10100 0    60   Input ~ 0
-A1
-Text GLabel 900  10300 0    60   Input ~ 0
-A0
-Text GLabel 1750 7450 0    60   Input ~ 0
-TLL_TX
-Text GLabel 1750 7650 0    60   Input ~ 0
-TLL_RX
-$Comp
-L SIM7000-rescue:Screw_Terminal_1x04-SIM7000-rescue J2
-U 1 1 5D3AF380
-P 1900 9300
-F 0 "J2" H 1900 9750 50  0000 C TNN
-F 1 "Screw_Terminal_1x04" V 1750 9300 50  0000 C TNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-4-3.5-H_1x04_P3.50mm_Horizontal" H 1900 8875 50  0001 C CNN
-F 3 "" H 1875 9500 50  0001 C CNN
-	1    1900 9300
-	-1   0    0    1   
-$EndComp
-Text GLabel 1700 9600 0    60   Input ~ 0
-V_3.3
-$Comp
-L power:GND #PWR07
-U 1 1 5D3AF4EA
-P 1700 9400
-F 0 "#PWR07" H 1700 9150 50  0001 C CNN
-F 1 "GND" H 1700 9250 50  0000 C CNN
-F 2 "" H 1700 9400 50  0000 C CNN
-F 3 "" H 1700 9400 50  0000 C CNN
-	1    1700 9400
-	0    1    1    0   
-$EndComp
-Text GLabel 1700 9200 0    60   Input ~ 0
-SDA
-Text GLabel 1700 9000 0    60   Input ~ 0
-SCL
-Text GLabel 2800 8800 0    60   Input ~ 0
-SD_SCLK
-Text GLabel 2800 9000 0    60   Input ~ 0
-SD_MISO
-Text GLabel 2800 9200 0    60   Input ~ 0
-SD_MOSI
-Text GLabel 2800 9400 0    60   Input ~ 0
-SD_CS
-Text GLabel 2800 10000 0    60   Input ~ 0
-D3
-Text GLabel 2800 10200 0    60   Input ~ 0
-D2
-Text GLabel 2800 9600 0    60   Input ~ 0
-D7
-Text GLabel 3500 7300 0    60   Input ~ 0
 AREF
 $Comp
 L SIM7000-rescue:TEST-SIM7000-rescue TP1
@@ -755,7 +628,7 @@ U 1 1 5D3CBD17
 P 13200 2100
 F 0 "C8" H 13225 2200 50  0000 L CNN
 F 1 "100 nF" H 13225 2000 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 13238 1950 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 13238 1950 50  0001 C CNN
 F 3 "" H 13200 2100 50  0000 C CNN
 	1    13200 2100
 	1    0    0    -1  
@@ -782,7 +655,7 @@ U 1 1 5D3CDF21
 P 15100 1150
 F 0 "C9" H 15125 1250 50  0000 L CNN
 F 1 "100 nF" H 15125 1050 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 15138 1000 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 15138 1000 50  0001 C CNN
 F 3 "" H 15100 1150 50  0000 C CNN
 	1    15100 1150
 	0    1    1    0   
@@ -795,7 +668,7 @@ U 1 1 5D3D04A9
 P 15450 1550
 F 0 "D5" H 15450 1650 50  0000 C CNN
 F 1 "LED" H 15450 1450 50  0000 C CNN
-F 2 "LED_SMD:LED_0805_2012Metric" H 15450 1550 50  0001 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 15450 1550 50  0001 C CNN
 F 3 "" H 15450 1550 50  0000 C CNN
 	1    15450 1550
 	1    0    0    -1  
@@ -806,7 +679,7 @@ U 1 1 5D3D0757
 P 15100 1550
 F 0 "R7" V 15180 1550 50  0000 C CNN
 F 1 "3.3 kΩ" V 15000 1550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 15030 1550 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 15030 1550 50  0001 C CNN
 F 3 "" H 15100 1550 50  0000 C CNN
 	1    15100 1550
 	0    1    1    0   
@@ -850,7 +723,7 @@ U 1 1 5D430CC2
 P 15750 3600
 F 0 "D4" H 15750 3700 50  0000 C CNN
 F 1 "LED" H 15750 3500 50  0000 C CNN
-F 2 "LED_SMD:LED_0805_2012Metric" H 15750 3600 50  0001 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 15750 3600 50  0001 C CNN
 F 3 "" H 15750 3600 50  0000 C CNN
 	1    15750 3600
 	0    1    1    0   
@@ -861,7 +734,7 @@ U 1 1 5D430D8C
 P 15750 3150
 F 0 "R6" V 15830 3150 50  0000 C CNN
 F 1 "3.3 kΩ" V 15650 3150 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 15680 3150 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 15680 3150 50  0001 C CNN
 F 3 "" H 15750 3150 50  0000 C CNN
 	1    15750 3150
 	-1   0    0    1   
@@ -883,7 +756,7 @@ U 1 1 5D4315A4
 P 11000 1500
 F 0 "D3" H 11000 1600 50  0000 C CNN
 F 1 "LED" H 11000 1400 50  0000 C CNN
-F 2 "LED_SMD:LED_0805_2012Metric" H 11000 1500 50  0001 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 11000 1500 50  0001 C CNN
 F 3 "" H 11000 1500 50  0000 C CNN
 	1    11000 1500
 	1    0    0    -1  
@@ -894,7 +767,7 @@ U 1 1 5D4315AA
 P 10550 1500
 F 0 "R5" V 10630 1500 50  0000 C CNN
 F 1 "3.3 kΩ" V 10450 1500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 10480 1500 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 10480 1500 50  0001 C CNN
 F 3 "" H 10550 1500 50  0000 C CNN
 	1    10550 1500
 	0    1    1    0   
@@ -920,7 +793,7 @@ U 1 1 5D432F55
 P 11000 1200
 F 0 "D2" H 11000 1300 50  0000 C CNN
 F 1 "LED" H 11000 1100 50  0000 C CNN
-F 2 "LED_SMD:LED_0805_2012Metric" H 11000 1200 50  0001 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 11000 1200 50  0001 C CNN
 F 3 "" H 11000 1200 50  0000 C CNN
 	1    11000 1200
 	1    0    0    -1  
@@ -931,7 +804,7 @@ U 1 1 5D432F5B
 P 10550 1200
 F 0 "R4" V 10630 1200 50  0000 C CNN
 F 1 "3.3 kΩ" V 10450 1200 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 10480 1200 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 10480 1200 50  0001 C CNN
 F 3 "" H 10550 1200 50  0000 C CNN
 	1    10550 1200
 	0    1    1    0   
@@ -953,7 +826,7 @@ U 1 1 5D4364BC
 P 15450 1650
 F 0 "D6" H 15450 1750 50  0000 C CNN
 F 1 "LED" H 15450 1550 50  0000 C CNN
-F 2 "LED_SMD:LED_0805_2012Metric" H 15450 1650 50  0001 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 15450 1650 50  0001 C CNN
 F 3 "" H 15450 1650 50  0000 C CNN
 	1    15450 1650
 	1    0    0    -1  
@@ -964,7 +837,7 @@ U 1 1 5D4364C2
 P 15100 1650
 F 0 "R8" V 15180 1650 50  0000 C CNN
 F 1 "3.3 kΩ" V 15000 1650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 15030 1650 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 15030 1650 50  0001 C CNN
 F 3 "" H 15100 1650 50  0000 C CNN
 	1    15100 1650
 	0    1    1    0   
@@ -1010,7 +883,7 @@ U 1 1 5D446624
 P 12150 2800
 F 0 "R3" V 12230 2800 50  0000 C CNN
 F 1 "10 kΩ" V 12050 2800 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 12080 2800 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 12080 2800 50  0001 C CNN
 F 3 "" H 12150 2800 50  0000 C CNN
 	1    12150 2800
 	1    0    0    -1  
@@ -1025,7 +898,7 @@ U 1 1 5D448DD0
 P 10500 2650
 F 0 "R2" V 10580 2650 50  0000 C CNN
 F 1 "10 kΩ" V 10400 2650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 10430 2650 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 10430 2650 50  0001 C CNN
 F 3 "" H 10500 2650 50  0000 C CNN
 	1    10500 2650
 	1    0    0    -1  
@@ -1268,125 +1141,8 @@ V_3.3
 NoConn ~ 6550 3550
 Text GLabel 3500 6000 2    60   Input ~ 0
 D6
-$Comp
-L SIM7000-rescue:Screw_Terminal_1x08-SIM7000-rescue J4
-U 1 1 5D432391
-P 3000 9500
-F 0 "J4" H 3000 10350 50  0000 C TNN
-F 1 "Screw_Terminal_1x08" V 2850 9500 50  0000 C TNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-8-3.5-H_1x08_P3.50mm_Horizontal" H 3000 8675 50  0001 C CNN
-F 3 "" H 2975 10100 50  0001 C CNN
-	1    3000 9500
-	-1   0    0    1   
-$EndComp
-Text GLabel 2800 9800 0    60   Input ~ 0
-D6
-$Comp
-L SIM7000-rescue:RJ45-SIM7000-rescue J6
-U 1 1 5D433563
-P 13750 3300
-F 0 "J6" H 13950 3800 50  0000 C CNN
-F 1 "RJ45" H 13600 3800 50  0000 C CNN
-F 2 "SIMFootprints:RJ_45" H 13750 3300 50  0001 C CNN
-F 3 "" H 13750 3300 50  0000 C CNN
-	1    13750 3300
-	1    0    0    -1  
-$EndComp
-Text GLabel 13400 3750 3    60   Input ~ 0
-A0
-Text GLabel 13600 3750 3    60   Input ~ 0
-A1
-Text GLabel 13500 3750 3    60   Input ~ 0
-V_3.3
-Text GLabel 13800 3750 3    60   Input ~ 0
-A2
-Text GLabel 14000 3750 3    60   Input ~ 0
-A3
-$Comp
-L power:GND #PWR049
-U 1 1 5D43B9DB
-P 13900 3750
-F 0 "#PWR049" H 13900 3500 50  0001 C CNN
-F 1 "GND" H 13900 3600 50  0000 C CNN
-F 2 "" H 13900 3750 50  0000 C CNN
-F 3 "" H 13900 3750 50  0000 C CNN
-	1    13900 3750
-	1    0    0    -1  
-$EndComp
-Text GLabel 13700 3750 3    60   Input ~ 0
-SCL
-Text GLabel 14100 3750 3    60   Input ~ 0
-SDA
-$Comp
-L SIM7000-rescue:Screw_Terminal_1x02-SIM7000-rescue J3
-U 1 1 5D43FC6D
-P 1950 7550
-F 0 "J3" H 1950 7800 50  0000 C TNN
-F 1 "Screw_Terminal_1x02" V 1800 7550 50  0000 C TNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal" H 1950 7325 50  0001 C CNN
-F 3 "" H 1925 7550 50  0001 C CNN
-	1    1950 7550
-	-1   0    0    1   
-$EndComp
-Text GLabel 1700 8300 0    60   Input ~ 0
-V_3.3
-Text GLabel 1700 8000 0    60   Input ~ 0
-SCL
-Text GLabel 1700 8100 0    60   Input ~ 0
-SDA
-$Comp
-L power:GND #PWR05
-U 1 1 5D440985
-P 1700 8200
-F 0 "#PWR05" H 1700 7950 50  0001 C CNN
-F 1 "GND" H 1700 8050 50  0000 C CNN
-F 2 "" H 1700 8200 50  0000 C CNN
-F 3 "" H 1700 8200 50  0000 C CNN
-	1    1700 8200
-	0    1    1    0   
-$EndComp
-$Comp
-L SIM7000-rescue:CONN_01X04-SIM7000-rescue P2
-U 1 1 5D44098B
-P 1900 8150
-F 0 "P2" H 1900 8400 50  0000 C CNN
-F 1 "CONN_01X04" V 2000 8150 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1900 8150 50  0001 C CNN
-F 3 "" H 1900 8150 50  0000 C CNN
-	1    1900 8150
-	1    0    0    -1  
-$EndComp
 NoConn ~ 2600 2800
 NoConn ~ 2600 2100
-$Comp
-L SIM7000-rescue:Screw_Terminal_1x04-SIM7000-rescue J5
-U 1 1 5D456DDA
-P 3850 8200
-F 0 "J5" H 3850 8650 50  0000 C TNN
-F 1 "Screw_Terminal_1x04" V 3700 8200 50  0000 C TNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-4-3.5-H_1x04_P3.50mm_Horizontal" H 3850 7775 50  0001 C CNN
-F 3 "" H 3825 8400 50  0001 C CNN
-	1    3850 8200
-	-1   0    0    1   
-$EndComp
-Text GLabel 900  7700 0    60   Input ~ 0
-SCL
-Text GLabel 900  7800 0    60   Input ~ 0
-SDA
-Text GLabel 900  7900 0    60   Input ~ 0
-A3
-Text GLabel 900  8000 0    60   Input ~ 0
-A2
-Text GLabel 900  8100 0    60   Input ~ 0
-A1
-Text GLabel 900  8200 0    60   Input ~ 0
-A0
-Text GLabel 2700 7250 0    60   Input ~ 0
-D6
-Text GLabel 2700 7050 0    60   Input ~ 0
-D2
-Text GLabel 2700 7150 0    60   Input ~ 0
-D3
 Wire Wire Line
 	7450 1350 7550 1350
 Wire Wire Line
@@ -1491,8 +1247,6 @@ Text Notes 14550 2750 0    60   ~ 0
 Serial USB Conn
 Wire Notes Line
 	12800 4300 16000 4300
-Text Notes 12850 2750 0    60   ~ 0
-Eithernet Sensor Port
 Connection ~ 10700 2950
 Wire Notes Line
 	12800 4300 12800 1900
@@ -1506,8 +1260,6 @@ Wire Notes Line
 	4500 10500 500  10500
 Wire Notes Line
 	500  3750 500  10500
-Text Notes 600  6800 0    60   ~ 0
-Peripheral Connectivity
 Text GLabel 13450 1950 1    60   Input ~ 0
 TTL_3.3V
 Text GLabel 12550 1400 2    60   Input ~ 0
@@ -1528,7 +1280,7 @@ U 1 1 5D6101B3
 P 13550 2100
 F 0 "R9" H 13620 2145 50  0000 L CNN
 F 1 "10 kΩ" H 13620 2056 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 13480 2100 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 13480 2100 50  0001 C CNN
 F 3 "~" H 13550 2100 50  0001 C CNN
 	1    13550 2100
 	1    0    0    -1  
@@ -1665,7 +1417,7 @@ U 1 1 5DBC63AD
 P 8700 1200
 F 0 "C10" V 8850 1200 50  0000 C CNN
 F 1 "33 pF" V 8540 1200 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 8738 1050 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8738 1050 50  0001 C CNN
 F 3 "~" H 8700 1200 50  0001 C CNN
 	1    8700 1200
 	0    1    1    0   
@@ -1726,7 +1478,7 @@ U 1 1 5E983D64
 P 12650 5050
 F 0 "C11" V 12398 5050 50  0000 C CNN
 F 1 "12 pF" V 12489 5050 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 12688 4900 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 12688 4900 50  0001 C CNN
 F 3 "~" H 12650 5050 50  0001 C CNN
 	1    12650 5050
 	0    1    1    0   
@@ -1737,7 +1489,7 @@ U 1 1 5E984B65
 P 12650 5350
 F 0 "C12" V 12550 5500 50  0000 C CNN
 F 1 "12 pF" V 12800 5400 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 12688 5200 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 12688 5200 50  0001 C CNN
 F 3 "~" H 12650 5350 50  0001 C CNN
 	1    12650 5350
 	0    1    1    0   
@@ -1795,7 +1547,7 @@ U 1 1 5E998630
 P 2900 4900
 F 0 "U6" H 3150 3450 50  0000 C CNN
 F 1 "ATmega328P-AU" H 2400 3450 50  0000 C CNN
-F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 2900 4900 50  0001 C CIN
+F 2 "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.1x3.1mm" H 2900 4900 50  0001 C CIN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf" H 2900 4900 50  0001 C CNN
 	1    2900 4900
 	1    0    0    -1  
@@ -1833,119 +1585,6 @@ F 2 "" H 12250 4450 50  0000 C CNN
 F 3 "" H 12250 4450 50  0000 C CNN
 	1    12250 4450
 	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x05 J8
-U 1 1 5EB07E4A
-P 3700 7100
-F 0 "J8" H 3780 7142 50  0000 L CNN
-F 1 "Conn_01x05" H 3780 7051 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 3700 7100 50  0001 C CNN
-F 3 "~" H 3700 7100 50  0001 C CNN
-	1    3700 7100
-	1    0    0    -1  
-$EndComp
-Text GLabel 2700 7750 0    60   Input ~ 0
-SD_SCLK
-Text GLabel 2700 7650 0    60   Input ~ 0
-SD_MISO
-Text GLabel 2700 7550 0    60   Input ~ 0
-SD_MOSI
-Text GLabel 2700 7450 0    60   Input ~ 0
-SD_CS
-Text GLabel 2700 7350 0    60   Input ~ 0
-D7
-$Comp
-L Connector_Generic:Conn_01x06 J9
-U 1 1 5EB658F4
-P 1100 7900
-F 0 "J9" H 1180 7892 50  0000 L CNN
-F 1 "Conn_01x06" H 1180 7801 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 1100 7900 50  0001 C CNN
-F 3 "~" H 1100 7900 50  0001 C CNN
-	1    1100 7900
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR015
-U 1 1 5D3B7090
-P 3500 6900
-F 0 "#PWR015" H 3500 6650 50  0001 C CNN
-F 1 "GND" H 3500 6750 50  0000 C CNN
-F 2 "" H 3500 6900 50  0000 C CNN
-F 3 "" H 3500 6900 50  0000 C CNN
-	1    3500 6900
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR014
-U 1 1 5D3B712E
-P 3500 7100
-F 0 "#PWR014" H 3500 6850 50  0001 C CNN
-F 1 "GND" H 3500 6950 50  0000 C CNN
-F 2 "" H 3500 7100 50  0000 C CNN
-F 3 "" H 3500 7100 50  0000 C CNN
-	1    3500 7100
-	0    1    1    0   
-$EndComp
-$Comp
-L power:VPP #PWR012
-U 1 1 5D3B4E69
-P 3500 7000
-F 0 "#PWR012" H 3500 6850 50  0001 C CNN
-F 1 "VPP" H 3500 7150 50  0000 C CNN
-F 2 "" H 3500 7000 50  0000 C CNN
-F 3 "" H 3500 7000 50  0000 C CNN
-	1    3500 7000
-	0    -1   -1   0   
-$EndComp
-Text GLabel 3500 7200 0    60   Input ~ 0
-V_3.3
-Text GLabel 3650 7900 0    60   Input ~ 0
-V_3.3
-$Comp
-L power:GND #PWR020
-U 1 1 5D3B78E5
-P 3650 8500
-F 0 "#PWR020" H 3650 8250 50  0001 C CNN
-F 1 "GND" H 3650 8350 50  0000 C CNN
-F 2 "" H 3650 8500 50  0000 C CNN
-F 3 "" H 3650 8500 50  0000 C CNN
-	1    3650 8500
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR019
-U 1 1 5D3B78D2
-P 3650 8100
-F 0 "#PWR019" H 3650 7850 50  0001 C CNN
-F 1 "GND" H 3650 7950 50  0000 C CNN
-F 2 "" H 3650 8100 50  0000 C CNN
-F 3 "" H 3650 8100 50  0000 C CNN
-	1    3650 8100
-	0    1    1    0   
-$EndComp
-$Comp
-L power:VPP #PWR018
-U 1 1 5D3B78CA
-P 3650 8300
-F 0 "#PWR018" H 3650 8150 50  0001 C CNN
-F 1 "VPP" H 3650 8450 50  0000 C CNN
-F 2 "" H 3650 8300 50  0000 C CNN
-F 3 "" H 3650 8300 50  0000 C CNN
-	1    3650 8300
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x08 J10
-U 1 1 5EB3CBC0
-P 2900 7350
-F 0 "J10" H 2980 7342 50  0000 L CNN
-F 1 "Conn_01x08" H 2980 7251 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 2900 7350 50  0001 C CNN
-F 3 "~" H 2900 7350 50  0001 C CNN
-	1    2900 7350
-	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	7850 900  7850 1500
@@ -2026,4 +1665,6 @@ F 3 "" H 10800 6200 60  0001 C CNN
 	1    10800 6200
 	1    0    0    -1  
 $EndComp
+Text Notes 13550 4650 0    60   ~ 0
+RFID
 $EndSCHEMATC
