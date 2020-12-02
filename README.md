@@ -1,2 +1,2 @@
 # micro-BoSL
-I micro version of the BoSL board
+A micro version of the BoSL board
