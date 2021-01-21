@@ -1664,7 +1664,7 @@ U 1 1 600AA82B
 P 2900 6650
 F 0 "J6" H 2980 6642 50  0000 L CNN
 F 1 "Conn_01x10" H 2980 6551 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" H 2900 6650 50  0001 C CNN
+F 2 "Connector_PinSocket_1.27mm:PinSocket_1x10_P1.27mm_Vertical" H 2900 6650 50  0001 C CNN
 F 3 "~" H 2900 6650 50  0001 C CNN
 	1    2900 6650
 	1    0    0    -1  
