@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name SIM7000-rescue)(type Legacy)(uri ${KIPRJMOD}/SIM7000-rescue.lib)(options "")(descr ""))
+  (lib (name BoSLnano-rescue)(type Legacy)(uri ${KIPRJMOD}/BoSLnano-rescue.lib)(options "")(descr ""))
 )
