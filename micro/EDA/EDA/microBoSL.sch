@@ -1062,7 +1062,7 @@ TLL_TX
 Text GLabel 10150 1600 2    60   Input ~ 0
 TLL_RX
 $Comp
-L Connector:USB_B_Micro J8
+L microBoSL-rescue:USB_B_Micro-Connector J8
 U 1 1 5D612C02
 P 14700 3950
 F 0 "J8" V 14711 4279 50  0000 L CNN
