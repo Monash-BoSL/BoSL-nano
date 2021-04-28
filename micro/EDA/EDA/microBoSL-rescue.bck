@@ -12,6 +12,12 @@ K transistor PMOS P-MOS P-MOSFET
 F https://au.mouser.com/datasheet/2/115/DMP2165UW-1365845.pdf
 $ENDCMP
 #
+$CMP SW_SPDT
+D Switch, single pole double throw
+K switch single-pole double-throw spdt ON-ON
+F ~
+$ENDCMP
+#
 $CMP TPS709A33DBVT
 F https://www.ti.com/lit/ds/symlink/tps709.pdf?ts=1619152264234&ref_url=https%253A%252F%252Fau.mouser.com%252F
 $ENDCMP
