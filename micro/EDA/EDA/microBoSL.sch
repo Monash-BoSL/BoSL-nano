@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
 Title "microBoSL Board"
-Date "2021-04-23"
+Date "2021-05-03"
 Rev "0.2.0"
 Comp ""
 Comment1 ""
@@ -141,17 +141,6 @@ F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 950 4800 60  0001 
 F 3 "" H 950 4800 60  0001 C CNN
 	1    1000 4700
 	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR05
-U 1 1 5D397783
-P 1750 4400
-F 0 "#PWR05" H 1750 4150 50  0001 C CNN
-F 1 "GND" V 1750 4225 50  0000 C CNN
-F 2 "" H 1750 4400 50  0000 C CNN
-F 3 "" H 1750 4400 50  0000 C CNN
-	1    1750 4400
-	0    1    1    0   
 $EndComp
 Text GLabel 6800 5800 2    60   Input ~ 0
 D7
@@ -414,17 +403,6 @@ F 3 "" H 1750 5100 50  0000 C CNN
 	1    1750 5100
 	0    1    1    0   
 $EndComp
-$Comp
-L power:VPP #PWR07
-U 1 1 5D3B4E69
-P 1750 5000
-F 0 "#PWR07" H 1750 4850 50  0001 C CNN
-F 1 "VPP" V 1750 5200 50  0000 C CNN
-F 2 "" H 1750 5000 50  0000 C CNN
-F 3 "" H 1750 5000 50  0000 C CNN
-	1    1750 5000
-	0    -1   -1   0   
-$EndComp
 Text GLabel 1750 5200 0    60   Input ~ 0
 V_3.3
 $Comp
@@ -480,14 +458,14 @@ Text GLabel 6800 5100 2    60   Input ~ 0
 TLL_RX
 Text GLabel 6800 5500 2    60   Input ~ 0
 D4
-Text GLabel 6800 3400 2    60   Input ~ 0
-D8
+Text GLabel 6800 3600 2    60   Input ~ 0
+SS
 Text GLabel 6800 3700 2    60   Input ~ 0
-D11
+MOSI
 Text GLabel 6800 3800 2    60   Input ~ 0
-D12
+MISO
 Text GLabel 6800 3900 2    60   Input ~ 0
-D13
+SCLK
 $Comp
 L Device:R R3
 U 1 1 5FCFEA38
@@ -544,8 +522,6 @@ F 3 "" H 3700 3650 50  0000 C CNN
 $EndComp
 Text Notes 3400 3950 3    60   ~ 0
 Hall Wake
-Text Notes 3550 3950 3    60   ~ 0
-Hall Count
 Text GLabel 6800 5600 2    60   Input ~ 0
 Hall_WKE_P
 Text GLabel 3200 3850 0    60   Input ~ 0
@@ -578,7 +554,7 @@ U 1 1 5FD0E5B2
 P 1950 3950
 F 0 "J1" H 2030 3942 50  0000 L CNN
 F 1 "Conn_01x04" H 2030 3851 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1950 3950 50  0001 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x04_P1.27mm_Vertical" H 1950 3950 50  0001 C CNN
 F 3 "~" H 1950 3950 50  0001 C CNN
 	1    1950 3950
 	1    0    0    -1  
@@ -596,33 +572,6 @@ F 3 "~" H 7325 1125 50  0001 C CNN
 	1    7325 1125
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x04 J2
-U 1 1 5FD316A6
-P 1950 4500
-F 0 "J2" H 2030 4492 50  0000 L CNN
-F 1 "Conn_01x04" H 2030 4401 50  0000 L CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_1x04_P1.27mm_Vertical" H 1950 4500 50  0001 C CNN
-F 3 "~" H 1950 4500 50  0001 C CNN
-	1    1950 4500
-	1    0    0    -1  
-$EndComp
-Text GLabel 3300 4550 0    60   Input ~ 0
-D3
-Text GLabel 3300 4650 0    60   Input ~ 0
-D4
-Text GLabel 3300 4750 0    60   Input ~ 0
-D7
-Text GLabel 3300 4850 0    60   Input ~ 0
-D8
-Text GLabel 3300 4950 0    60   Input ~ 0
-D10
-Text GLabel 3300 5050 0    60   Input ~ 0
-D11
-Text GLabel 3300 5150 0    60   Input ~ 0
-D12
-Text GLabel 3300 5250 0    60   Input ~ 0
-D13
 $Comp
 L Connector_Generic:Conn_01x04 J3
 U 1 1 5FD35207
@@ -683,29 +632,7 @@ F 3 "" H 1700 1600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR023
-U 1 1 5FDF7BF0
-P 8150 4200
-F 0 "#PWR023" H 8150 3950 50  0001 C CNN
-F 1 "GND" H 8150 4050 50  0000 C CNN
-F 2 "" H 8150 4200 50  0000 C CNN
-F 3 "" H 8150 4200 50  0000 C CNN
-	1    8150 4200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR022
-U 1 1 5FDF7F7C
-P 8150 3800
-F 0 "#PWR022" H 8150 3550 50  0001 C CNN
-F 1 "GND" H 8150 3650 50  0000 C CNN
-F 2 "" H 8150 3800 50  0000 C CNN
-F 3 "" H 8150 3800 50  0000 C CNN
-	1    8150 3800
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:Crystal_GND24 Y1
+L Device:Crystal Y1
 U 1 1 5FDFDAE8
 P 8150 4000
 F 0 "Y1" H 8000 3725 50  0000 R CNN
@@ -716,21 +643,6 @@ F 4 "https://au.mouser.com/ProductDetail/Diodes-Incorporated/F90800021?qs=%252Bk
 	1    8150 4000
 	-1   0    0    1   
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x10 J6
-U 1 1 5FE03C64
-P 3500 4950
-F 0 "J6" H 3580 4942 50  0000 L CNN
-F 1 "Conn_01x10" H 3580 4851 50  0000 L CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_1x10_P1.27mm_Vertical" H 3500 4950 50  0001 C CNN
-F 3 "~" H 3500 4950 50  0001 C CNN
-	1    3500 4950
-	1    0    0    -1  
-$EndComp
-Text GLabel 3300 5450 0    60   Input ~ 0
-A3
-Text GLabel 3300 5350 0    60   Input ~ 0
-A1
 $Comp
 L power:GND #PWR041
 U 1 1 5FEA4AD1
@@ -1059,7 +971,7 @@ F 4 "https://au.mouser.com/ProductDetail/Microchip-Technology-Atmel/ATMEGA328P-M
 	1    6200 4600
 	1    0    0    -1  
 $EndComp
-Text GLabel 6800 3600 2    60   Input ~ 0
+Text GLabel 6800 3400 2    60   Input ~ 0
 MREV
 Text GLabel 6100 1225 0    60   Input ~ 0
 MFWD
@@ -1279,11 +1191,11 @@ Wire Wire Line
 Wire Wire Line
 	8500 4000 8500 4100
 Wire Wire Line
-	7925 4100 7925 4450
+	7925 4100 7925 4200
 Wire Wire Line
-	7925 4450 8375 4450
+	7925 4200 8375 4200
 Wire Wire Line
-	8375 4450 8375 4100
+	8375 4200 8375 4100
 Wire Wire Line
 	8375 4100 8500 4100
 Connection ~ 8500 4100
@@ -1398,4 +1310,36 @@ NoConn ~ 14300 3850
 NoConn ~ 14500 4250
 Wire Wire Line
 	2650 1650 3175 1650
+$Comp
+L Connector_Generic:Conn_01x04 J6
+U 1 1 609936C2
+P 3500 4650
+F 0 "J6" H 3580 4642 50  0000 L CNN
+F 1 "Conn_01x04" H 3580 4551 50  0000 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x04_P1.27mm_Vertical" H 3500 4650 50  0001 C CNN
+F 3 "~" H 3500 4650 50  0001 C CNN
+	1    3500 4650
+	1    0    0    -1  
+$EndComp
+Text GLabel 3300 4850 0    60   Input ~ 0
+SS
+Text GLabel 3300 4750 0    60   Input ~ 0
+MOSI
+Text GLabel 3300 4650 0    60   Input ~ 0
+MISO
+Text GLabel 3300 4550 0    60   Input ~ 0
+SCLK
+$Comp
+L Connector_Generic:Conn_01x03 J2
+U 1 1 609EBDCD
+P 1950 4600
+F 0 "J2" H 2030 4642 50  0000 L CNN
+F 1 "Conn_01x03" H 2030 4551 50  0000 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x03_P1.27mm_Vertical" H 1950 4600 50  0001 C CNN
+F 3 "~" H 1950 4600 50  0001 C CNN
+	1    1950 4600
+	1    0    0    -1  
+$EndComp
+Text GLabel 1750 5000 0    60   Input ~ 0
+VBAT
 $EndSCHEMATC
