@@ -5,8 +5,8 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
 Title "microBoSL Board"
-Date "2021-05-03"
-Rev "0.2.0"
+Date "2021-05-08"
+Rev "0.2.1"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -90,12 +90,6 @@ Text GLabel 1750 3850 0    60   Input ~ 0
 SCL
 Text GLabel 1750 3950 0    60   Input ~ 0
 SDA
-Text GLabel 6800 4400 2    60   Input ~ 0
-A1
-Text GLabel 6800 4600 2    60   Input ~ 0
-A3
-Text GLabel 6800 5400 2    60   Input ~ 0
-D3
 $Comp
 L power:GND #PWR013
 U 1 1 5CEFF41F
@@ -456,8 +450,6 @@ Text GLabel 6800 5200 2    60   Input ~ 0
 TLL_TX
 Text GLabel 6800 5100 2    60   Input ~ 0
 TLL_RX
-Text GLabel 6800 5500 2    60   Input ~ 0
-D4
 Text GLabel 6800 3600 2    60   Input ~ 0
 SS
 Text GLabel 6800 3700 2    60   Input ~ 0
@@ -496,7 +488,7 @@ Text GLabel 9600 4150 1    60   Input ~ 0
 V_3.3
 Text GLabel 10250 4950 0    60   Input ~ 0
 RTC_I
-Text GLabel 6800 5300 2    60   Input ~ 0
+Text GLabel 6800 5400 2    60   Input ~ 0
 RTC_I
 $Comp
 L power:GND #PWR015
@@ -560,16 +552,16 @@ F 3 "~" H 1950 3950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 6800 3500 2    60   Input ~ 0
-MFWD
+MFWD_A
 $Comp
 L Connector_Generic:Conn_01x02 J7
 U 1 1 5FD22A81
-P 7325 1125
-F 0 "J7" V 7289 937 50  0000 R CNN
-F 1 "MOTOR_OUT" V 7198 937 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7325 1125 50  0001 C CNN
-F 3 "~" H 7325 1125 50  0001 C CNN
-	1    7325 1125
+P 7400 9050
+F 0 "J7" V 7364 8862 50  0000 R CNN
+F 1 "MOTOR_OUT" V 7273 8862 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7400 9050 50  0001 C CNN
+F 3 "~" H 7400 9050 50  0001 C CNN
+	1    7400 9050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -711,8 +703,6 @@ NoConn ~ 14925 1575
 NoConn ~ 14925 1675
 Text Notes 14375 1175 0    60   ~ 0
 HEATSINK_GROUND
-Text Notes 4800 650  0    60   ~ 0
-Motor MOSFET
 Text Notes 11875 625  0    60   ~ 0
 USB-TTL Converter
 NoConn ~ 9150 1500
@@ -867,8 +857,6 @@ Wire Notes Line
 Wire Notes Line
 	12650 1800 12650 5850
 Wire Notes Line
-	4600 1800 12650 1800
-Wire Notes Line
 	12650 3300 16050 3300
 $Comp
 L microBoSL-rescue:TPS709A33DBVT U2
@@ -914,35 +902,35 @@ Connection ~ 2650 1650
 $Comp
 L Driver_Motor:ZXBM5210-S U4
 U 1 1 6087B1DA
-P 6500 1225
-F 0 "U4" H 6225 850 50  0000 C CNN
-F 1 "ZXBM5210-S" H 6150 950 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6550 975 50  0001 C CNN
-F 3 "https://www.diodes.com/assets/Datasheets/ZXBM5210.pdf" H 6500 1225 50  0001 C CNN
-F 4 "https://au.mouser.com/ProductDetail/Diodes-Incorporated/ZXBM5210-S-13?qs=98WN/nWUQiQlr91Z1/DTeg==" H 6500 1225 50  0001 C CNN "Supplier"
-	1    6500 1225
+P 6575 9150
+F 0 "U4" H 6300 8775 50  0000 C CNN
+F 1 "ZXBM5210-S" H 6225 8875 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6625 8900 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ZXBM5210.pdf" H 6575 9150 50  0001 C CNN
+F 4 "https://au.mouser.com/ProductDetail/Diodes-Incorporated/ZXBM5210-S-13?qs=98WN/nWUQiQlr91Z1/DTeg==" H 6575 9150 50  0001 C CNN "Supplier"
+	1    6575 9150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6900 1125 7125 1125
+	6975 9050 7200 9050
 Wire Wire Line
-	6900 1325 7025 1325
+	6975 9250 7100 9250
 Wire Wire Line
-	7025 1325 7025 1225
+	7100 9250 7100 9150
 Wire Wire Line
-	7025 1225 7125 1225
+	7100 9150 7200 9150
 $Comp
 L power:GND #PWR019
 U 1 1 60880610
-P 6500 1525
-F 0 "#PWR019" H 6500 1275 50  0001 C CNN
-F 1 "GND" H 6505 1352 50  0000 C CNN
-F 2 "" H 6500 1525 50  0001 C CNN
-F 3 "" H 6500 1525 50  0001 C CNN
-	1    6500 1525
+P 6575 9450
+F 0 "#PWR019" H 6575 9200 50  0001 C CNN
+F 1 "GND" H 6580 9277 50  0000 C CNN
+F 2 "" H 6575 9450 50  0001 C CNN
+F 3 "" H 6575 9450 50  0001 C CNN
+	1    6575 9450
 	1    0    0    -1  
 $EndComp
-Text GLabel 6400 775  1    60   Input ~ 0
+Text GLabel 6475 8700 1    60   Input ~ 0
 V_3.3
 $Comp
 L power:VPP #PWR011
@@ -955,9 +943,9 @@ F 3 "" H 2075 6225 50  0000 C CNN
 	1    2075 6225
 	1    0    0    -1  
 $EndComp
-Text GLabel 6600 750  1    60   Input ~ 0
+Text GLabel 6675 8675 1    60   Input ~ 0
 VBAT
-Text GLabel 5425 975  1    60   Input ~ 0
+Text GLabel 5500 8900 1    60   Input ~ 0
 V_3.3
 $Comp
 L MCU_Microchip_ATmega:ATmega328P-MMH U3
@@ -972,81 +960,81 @@ F 4 "https://au.mouser.com/ProductDetail/Microchip-Technology-Atmel/ATMEGA328P-M
 	1    0    0    -1  
 $EndComp
 Text GLabel 6800 3400 2    60   Input ~ 0
-MREV
-Text GLabel 6100 1225 0    60   Input ~ 0
-MFWD
-Text GLabel 6100 1325 0    60   Input ~ 0
-MREV
+MREV_A
+Text GLabel 6175 7700 0    60   Input ~ 0
+MFWD_B
+Text GLabel 6175 7800 0    60   Input ~ 0
+MREV_B
 Text GLabel 3150 7350 2    60   Input ~ 0
 VBAT
 $Comp
 L Device:C C4
 U 1 1 6088EBAE
-P 7025 775
-F 0 "C4" V 7225 825 50  0000 L CNN
-F 1 "100 nF" V 7150 650 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 7063 625 50  0001 C CNN
-F 3 "https://au.mouser.com/datasheet/2/40/cx5r-776519.pdf" H 7025 775 50  0001 C CNN
-F 4 "https://au.mouser.com/ProductDetail/AVX/04026D104KAT2A?qs=sGAEpiMZZMuMW9TJLBQkXt13s4NPVwkd4SMA1jIwOsU=" H 7025 775 50  0001 C CNN "Supplier"
-	1    7025 775 
+P 7100 8700
+F 0 "C4" V 7300 8750 50  0000 L CNN
+F 1 "100 nF" V 7225 8575 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 7138 8550 50  0001 C CNN
+F 3 "https://au.mouser.com/datasheet/2/40/cx5r-776519.pdf" H 7100 8700 50  0001 C CNN
+F 4 "https://au.mouser.com/ProductDetail/AVX/04026D104KAT2A?qs=sGAEpiMZZMuMW9TJLBQkXt13s4NPVwkd4SMA1jIwOsU=" H 7100 8700 50  0001 C CNN "Supplier"
+	1    7100 8700
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:GND #PWR020
 U 1 1 6088F86A
-P 7300 850
-F 0 "#PWR020" H 7300 600 50  0001 C CNN
-F 1 "GND" H 7375 850 50  0000 C CNN
-F 2 "" H 7300 850 50  0001 C CNN
-F 3 "" H 7300 850 50  0001 C CNN
-	1    7300 850 
+P 7375 8775
+F 0 "#PWR020" H 7375 8525 50  0001 C CNN
+F 1 "GND" H 7450 8775 50  0000 C CNN
+F 2 "" H 7375 8775 50  0001 C CNN
+F 3 "" H 7375 8775 50  0001 C CNN
+	1    7375 8775
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6600 825  6600 775 
-Connection ~ 6600 775 
+	6675 8750 6675 8700
+Connection ~ 6675 8700
 Wire Wire Line
-	6600 775  6600 750 
+	6675 8700 6675 8675
 Wire Wire Line
-	6600 775  6875 775 
+	6675 8700 6950 8700
 Wire Wire Line
-	7175 775  7300 775 
+	7250 8700 7375 8700
 Wire Wire Line
-	7300 775  7300 850 
+	7375 8700 7375 8775
 $Comp
 L Device:C C3
 U 1 1 608957F7
-P 6000 800
-F 0 "C3" V 6200 850 50  0000 L CNN
-F 1 "100 nF" V 6125 675 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 6038 650 50  0001 C CNN
-F 3 "https://au.mouser.com/datasheet/2/40/cx5r-776519.pdf" H 6000 800 50  0001 C CNN
-F 4 "https://au.mouser.com/ProductDetail/AVX/04026D104KAT2A?qs=sGAEpiMZZMuMW9TJLBQkXt13s4NPVwkd4SMA1jIwOsU=" H 6000 800 50  0001 C CNN "Supplier"
-	1    6000 800 
+P 6075 8725
+F 0 "C3" V 6275 8775 50  0000 L CNN
+F 1 "100 nF" V 6200 8600 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6113 8575 50  0001 C CNN
+F 3 "https://au.mouser.com/datasheet/2/40/cx5r-776519.pdf" H 6075 8725 50  0001 C CNN
+F 4 "https://au.mouser.com/ProductDetail/AVX/04026D104KAT2A?qs=sGAEpiMZZMuMW9TJLBQkXt13s4NPVwkd4SMA1jIwOsU=" H 6075 8725 50  0001 C CNN "Supplier"
+	1    6075 8725
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	5425 1125 6100 1125
+	5500 9050 6175 9050
 Wire Wire Line
-	6400 825  6400 800 
+	6475 8750 6475 8725
 Wire Wire Line
-	6400 800  6150 800 
-Connection ~ 6400 800 
+	6475 8725 6225 8725
+Connection ~ 6475 8725
 Wire Wire Line
-	6400 800  6400 775 
+	6475 8725 6475 8700
 Wire Wire Line
-	5850 800  5750 800 
+	5925 8725 5825 8725
 Wire Wire Line
-	5750 800  5750 900 
+	5825 8725 5825 8825
 $Comp
 L power:GND #PWR017
 U 1 1 6089C125
-P 5750 900
-F 0 "#PWR017" H 5750 650 50  0001 C CNN
-F 1 "GND" H 5825 900 50  0000 C CNN
-F 2 "" H 5750 900 50  0001 C CNN
-F 3 "" H 5750 900 50  0001 C CNN
-	1    5750 900 
+P 5825 8825
+F 0 "#PWR017" H 5825 8575 50  0001 C CNN
+F 1 "GND" H 5900 8825 50  0000 C CNN
+F 2 "" H 5825 8825 50  0001 C CNN
+F 3 "" H 5825 8825 50  0001 C CNN
+	1    5825 8825
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1262,7 +1250,7 @@ Connection ~ 7250 4900
 Wire Wire Line
 	7250 4900 7450 4900
 Wire Wire Line
-	5425 975  5425 1125
+	5500 8900 5500 9050
 Wire Wire Line
 	13325 1075 13325 1225
 Wire Wire Line
@@ -1342,4 +1330,262 @@ F 3 "~" H 1950 4600 50  0001 C CNN
 $EndComp
 Text GLabel 1750 5000 0    60   Input ~ 0
 VBAT
+$Comp
+L Connector_Generic:Conn_01x02 J9
+U 1 1 6096180A
+P 7400 7600
+F 0 "J9" V 7364 7412 50  0000 R CNN
+F 1 "MOTOR_OUT" V 7273 7412 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 7400 7600 50  0001 C CNN
+F 3 "~" H 7400 7600 50  0001 C CNN
+	1    7400 7600
+	1    0    0    -1  
+$EndComp
+Text Notes 4875 7125 0    60   ~ 0
+Motor H Bridges
+$Comp
+L Driver_Motor:ZXBM5210-S U8
+U 1 1 60961812
+P 6575 7700
+F 0 "U8" H 6300 7325 50  0000 C CNN
+F 1 "ZXBM5210-S" H 6225 7425 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6625 7450 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ZXBM5210.pdf" H 6575 7700 50  0001 C CNN
+F 4 "https://au.mouser.com/ProductDetail/Diodes-Incorporated/ZXBM5210-S-13?qs=98WN/nWUQiQlr91Z1/DTeg==" H 6575 7700 50  0001 C CNN "Supplier"
+	1    6575 7700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6975 7600 7200 7600
+Wire Wire Line
+	6975 7800 7100 7800
+Wire Wire Line
+	7100 7800 7100 7700
+Wire Wire Line
+	7100 7700 7200 7700
+$Comp
+L power:GND #PWR07
+U 1 1 6096181C
+P 6575 8000
+F 0 "#PWR07" H 6575 7750 50  0001 C CNN
+F 1 "GND" H 6580 7827 50  0000 C CNN
+F 2 "" H 6575 8000 50  0001 C CNN
+F 3 "" H 6575 8000 50  0001 C CNN
+	1    6575 8000
+	1    0    0    -1  
+$EndComp
+Text GLabel 6475 7250 1    60   Input ~ 0
+V_3.3
+Text GLabel 6675 7225 1    60   Input ~ 0
+VBAT
+Text GLabel 5500 7450 1    60   Input ~ 0
+V_3.3
+Text GLabel 6175 9150 0    60   Input ~ 0
+MFWD_A
+Text GLabel 6175 9250 0    60   Input ~ 0
+MREV_A
+$Comp
+L Device:C C12
+U 1 1 60961828
+P 7100 7250
+F 0 "C12" V 7300 7300 50  0000 L CNN
+F 1 "100 nF" V 7225 7125 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 7138 7100 50  0001 C CNN
+F 3 "https://au.mouser.com/datasheet/2/40/cx5r-776519.pdf" H 7100 7250 50  0001 C CNN
+F 4 "https://au.mouser.com/ProductDetail/AVX/04026D104KAT2A?qs=sGAEpiMZZMuMW9TJLBQkXt13s4NPVwkd4SMA1jIwOsU=" H 7100 7250 50  0001 C CNN "Supplier"
+	1    7100 7250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR014
+U 1 1 6096182E
+P 7375 7325
+F 0 "#PWR014" H 7375 7075 50  0001 C CNN
+F 1 "GND" H 7450 7325 50  0000 C CNN
+F 2 "" H 7375 7325 50  0001 C CNN
+F 3 "" H 7375 7325 50  0001 C CNN
+	1    7375 7325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6675 7300 6675 7250
+Connection ~ 6675 7250
+Wire Wire Line
+	6675 7250 6675 7225
+Wire Wire Line
+	6675 7250 6950 7250
+Wire Wire Line
+	7250 7250 7375 7250
+Wire Wire Line
+	7375 7250 7375 7325
+$Comp
+L Device:C C2
+U 1 1 6096183B
+P 6075 7275
+F 0 "C2" V 6275 7325 50  0000 L CNN
+F 1 "100 nF" V 6200 7150 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6113 7125 50  0001 C CNN
+F 3 "https://au.mouser.com/datasheet/2/40/cx5r-776519.pdf" H 6075 7275 50  0001 C CNN
+F 4 "https://au.mouser.com/ProductDetail/AVX/04026D104KAT2A?qs=sGAEpiMZZMuMW9TJLBQkXt13s4NPVwkd4SMA1jIwOsU=" H 6075 7275 50  0001 C CNN "Supplier"
+	1    6075 7275
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5500 7600 6175 7600
+Wire Wire Line
+	6475 7300 6475 7275
+Wire Wire Line
+	6475 7275 6225 7275
+Connection ~ 6475 7275
+Wire Wire Line
+	6475 7275 6475 7250
+Wire Wire Line
+	5925 7275 5825 7275
+Wire Wire Line
+	5825 7275 5825 7375
+$Comp
+L power:GND #PWR05
+U 1 1 60961848
+P 5825 7375
+F 0 "#PWR05" H 5825 7125 50  0001 C CNN
+F 1 "GND" H 5900 7375 50  0000 C CNN
+F 2 "" H 5825 7375 50  0001 C CNN
+F 3 "" H 5825 7375 50  0001 C CNN
+	1    5825 7375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 7450 5500 7600
+$Comp
+L Connector_Generic:Conn_01x02 J10
+U 1 1 609739B8
+P 10175 7600
+F 0 "J10" V 10139 7412 50  0000 R CNN
+F 1 "MOTOR_OUT" V 10048 7412 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10175 7600 50  0001 C CNN
+F 3 "~" H 10175 7600 50  0001 C CNN
+	1    10175 7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Driver_Motor:ZXBM5210-S U9
+U 1 1 609739C0
+P 9350 7700
+F 0 "U9" H 9075 7325 50  0000 C CNN
+F 1 "ZXBM5210-S" H 9000 7425 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 9400 7450 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ZXBM5210.pdf" H 9350 7700 50  0001 C CNN
+F 4 "https://au.mouser.com/ProductDetail/Diodes-Incorporated/ZXBM5210-S-13?qs=98WN/nWUQiQlr91Z1/DTeg==" H 9350 7700 50  0001 C CNN "Supplier"
+	1    9350 7700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9750 7600 9975 7600
+Wire Wire Line
+	9750 7800 9875 7800
+Wire Wire Line
+	9875 7800 9875 7700
+Wire Wire Line
+	9875 7700 9975 7700
+$Comp
+L power:GND #PWR023
+U 1 1 609739CA
+P 9350 8000
+F 0 "#PWR023" H 9350 7750 50  0001 C CNN
+F 1 "GND" H 9355 7827 50  0000 C CNN
+F 2 "" H 9350 8000 50  0001 C CNN
+F 3 "" H 9350 8000 50  0001 C CNN
+	1    9350 8000
+	1    0    0    -1  
+$EndComp
+Text GLabel 9250 7250 1    60   Input ~ 0
+V_3.3
+Text GLabel 9450 7225 1    60   Input ~ 0
+VBAT
+Text GLabel 8275 7450 1    60   Input ~ 0
+V_3.3
+Text GLabel 8950 7700 0    60   Input ~ 0
+MFWD_C
+Text GLabel 8950 7800 0    60   Input ~ 0
+MREV_C
+$Comp
+L Device:C C14
+U 1 1 609739D6
+P 9875 7250
+F 0 "C14" V 10075 7300 50  0000 L CNN
+F 1 "100 nF" V 10000 7125 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 9913 7100 50  0001 C CNN
+F 3 "https://au.mouser.com/datasheet/2/40/cx5r-776519.pdf" H 9875 7250 50  0001 C CNN
+F 4 "https://au.mouser.com/ProductDetail/AVX/04026D104KAT2A?qs=sGAEpiMZZMuMW9TJLBQkXt13s4NPVwkd4SMA1jIwOsU=" H 9875 7250 50  0001 C CNN "Supplier"
+	1    9875 7250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR043
+U 1 1 609739DC
+P 10150 7325
+F 0 "#PWR043" H 10150 7075 50  0001 C CNN
+F 1 "GND" H 10225 7325 50  0000 C CNN
+F 2 "" H 10150 7325 50  0001 C CNN
+F 3 "" H 10150 7325 50  0001 C CNN
+	1    10150 7325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 7300 9450 7250
+Connection ~ 9450 7250
+Wire Wire Line
+	9450 7250 9450 7225
+Wire Wire Line
+	9450 7250 9725 7250
+Wire Wire Line
+	10025 7250 10150 7250
+Wire Wire Line
+	10150 7250 10150 7325
+$Comp
+L Device:C C13
+U 1 1 609739E9
+P 8850 7275
+F 0 "C13" V 9050 7325 50  0000 L CNN
+F 1 "100 nF" V 8975 7150 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 8888 7125 50  0001 C CNN
+F 3 "https://au.mouser.com/datasheet/2/40/cx5r-776519.pdf" H 8850 7275 50  0001 C CNN
+F 4 "https://au.mouser.com/ProductDetail/AVX/04026D104KAT2A?qs=sGAEpiMZZMuMW9TJLBQkXt13s4NPVwkd4SMA1jIwOsU=" H 8850 7275 50  0001 C CNN "Supplier"
+	1    8850 7275
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8275 7600 8950 7600
+Wire Wire Line
+	9250 7300 9250 7275
+Wire Wire Line
+	9250 7275 9000 7275
+Connection ~ 9250 7275
+Wire Wire Line
+	9250 7275 9250 7250
+Wire Wire Line
+	8700 7275 8600 7275
+Wire Wire Line
+	8600 7275 8600 7375
+$Comp
+L power:GND #PWR022
+U 1 1 609739F6
+P 8600 7375
+F 0 "#PWR022" H 8600 7125 50  0001 C CNN
+F 1 "GND" H 8675 7375 50  0000 C CNN
+F 2 "" H 8600 7375 50  0001 C CNN
+F 3 "" H 8600 7375 50  0001 C CNN
+	1    8600 7375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8275 7450 8275 7600
+Text GLabel 6800 5300 2    60   Input ~ 0
+MFWD_B
+Text GLabel 6800 5500 2    60   Input ~ 0
+MREV_B
+Text GLabel 6800 4400 2    60   Input ~ 0
+MFWD_C
+Text GLabel 6800 4600 2    60   Input ~ 0
+MREV_C
 $EndSCHEMATC
