@@ -136,8 +136,6 @@ F 3 "" H 950 4800 60  0001 C CNN
 	1    1000 4700
 	0    -1   -1   0   
 $EndComp
-Text GLabel 6800 5800 2    60   Input ~ 0
-D7
 Text GLabel 5600 3400 0    60   Input ~ 0
 AREF
 Text GLabel 13325 1775 0    60   Input ~ 0
@@ -235,8 +233,8 @@ Wire Wire Line
 	7850 4900 7750 4900
 Text GLabel 6200 3100 1    60   Input ~ 0
 V_3.3
-Text GLabel 6800 5700 2    60   Input ~ 0
-Hall_CNT_P
+Text GLabel 6800 4600 2    60   Input ~ 0
+Hall_MC_S
 Text GLabel 14925 1475 2    60   Input ~ 0
 AND_TX
 Text GLabel 14925 1375 2    60   Input ~ 0
@@ -493,33 +491,31 @@ RTC_I
 $Comp
 L power:GND #PWR015
 U 1 1 5FD06040
-P 3200 3650
-F 0 "#PWR015" H 3200 3400 50  0001 C CNN
-F 1 "GND" V 3200 3475 50  0000 C CNN
-F 2 "" H 3200 3650 50  0000 C CNN
-F 3 "" H 3200 3650 50  0000 C CNN
-	1    3200 3650
+P 3400 4150
+F 0 "#PWR015" H 3400 3900 50  0001 C CNN
+F 1 "GND" V 3400 3975 50  0000 C CNN
+F 2 "" H 3400 4150 50  0000 C CNN
+F 3 "" H 3400 4150 50  0000 C CNN
+	1    3400 4150
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR016
 U 1 1 5FD062CD
-P 3700 3650
-F 0 "#PWR016" H 3700 3400 50  0001 C CNN
-F 1 "GND" V 3700 3450 50  0000 C CNN
-F 2 "" H 3700 3650 50  0000 C CNN
-F 3 "" H 3700 3650 50  0000 C CNN
-	1    3700 3650
-	0    -1   -1   0   
+P 3400 4625
+F 0 "#PWR016" H 3400 4375 50  0001 C CNN
+F 1 "GND" V 3400 4425 50  0000 C CNN
+F 2 "" H 3400 4625 50  0000 C CNN
+F 3 "" H 3400 4625 50  0000 C CNN
+	1    3400 4625
+	0    1    -1   0   
 $EndComp
-Text Notes 3400 3950 3    60   ~ 0
+Text Notes 3225 4035 0    60   ~ 0
 Hall Wake
-Text GLabel 6800 5600 2    60   Input ~ 0
-Hall_WKE_P
-Text GLabel 3200 3850 0    60   Input ~ 0
-Hall_WKE_P
-Text GLabel 3700 3850 2    60   Input ~ 0
-Hall_CNT_P
+Text GLabel 6800 4400 2    60   Input ~ 0
+Hall_MA_S
+Text GLabel 3400 4350 0    60   Input ~ 0
+Hall_P
 $Comp
 L Device:R R2
 U 1 1 5CE61DD3
@@ -533,12 +529,12 @@ F 4 "https://au.mouser.com/ProductDetail/Vishay-Dale/CRCW040210K0FKEDC?qs=/ha2py
 	0    1    1    0   
 $EndComp
 Text GLabel 6800 4500 2    60   Input ~ 0
-Hall_WKE_S
+Hall_MB_S
 Text GLabel 6800 4300 2    60   Input ~ 0
-Hall_CNT_S
-Text GLabel 3700 3750 2    60   Input ~ 0
-Hall_CNT_S
-Text GLabel 3200 3750 0    60   Input ~ 0
+Hall_WKE_S
+Text GLabel 3400 4725 0    60   Input ~ 0
+Hall_MA_S
+Text GLabel 3400 4250 0    60   Input ~ 0
 Hall_WKE_S
 $Comp
 L Connector_Generic:Conn_01x04 J1
@@ -573,17 +569,6 @@ F 1 "Conn_01x04" H 2030 4901 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1950 5000 50  0001 C CNN
 F 3 "~" H 1950 5000 50  0001 C CNN
 	1    1950 5000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_02x03_Odd_Even J5
-U 1 1 5FD501D9
-P 3400 3750
-F 0 "J5" H 3450 4067 50  0000 C CNN
-F 1 "Conn_02x03_Odd_Even" H 3450 3976 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 3400 3750 50  0001 C CNN
-F 3 "~" H 3400 3750 50  0001 C CNN
-	1    3400 3750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1301,21 +1286,21 @@ Wire Wire Line
 $Comp
 L Connector_Generic:Conn_01x04 J6
 U 1 1 609936C2
-P 3500 4650
-F 0 "J6" H 3580 4642 50  0000 L CNN
-F 1 "Conn_01x04" H 3580 4551 50  0000 L CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_1x04_P1.27mm_Vertical" H 3500 4650 50  0001 C CNN
-F 3 "~" H 3500 4650 50  0001 C CNN
-	1    3500 4650
+P 3550 3525
+F 0 "J6" H 3630 3517 50  0000 L CNN
+F 1 "Conn_01x04" H 3630 3426 50  0000 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x04_P1.27mm_Vertical" H 3550 3525 50  0001 C CNN
+F 3 "~" H 3550 3525 50  0001 C CNN
+	1    3550 3525
 	1    0    0    -1  
 $EndComp
-Text GLabel 3300 4850 0    60   Input ~ 0
+Text GLabel 3350 3725 0    60   Input ~ 0
 SS
-Text GLabel 3300 4750 0    60   Input ~ 0
+Text GLabel 3350 3625 0    60   Input ~ 0
 MOSI
-Text GLabel 3300 4650 0    60   Input ~ 0
+Text GLabel 3350 3525 0    60   Input ~ 0
 MISO
-Text GLabel 3300 4550 0    60   Input ~ 0
+Text GLabel 3350 3425 0    60   Input ~ 0
 SCLK
 $Comp
 L Connector_Generic:Conn_01x03 J2
@@ -1584,8 +1569,86 @@ Text GLabel 6800 5300 2    60   Input ~ 0
 MFWD_B
 Text GLabel 6800 5500 2    60   Input ~ 0
 MREV_B
-Text GLabel 6800 4400 2    60   Input ~ 0
+Text GLabel 6800 5600 2    60   Input ~ 0
 MFWD_C
-Text GLabel 6800 4600 2    60   Input ~ 0
+Text GLabel 6800 5700 2    60   Input ~ 0
 MREV_C
+$Comp
+L Connector_Generic:Conn_01x03 J5
+U 1 1 60A95929
+P 3600 4250
+F 0 "J5" H 3680 4292 50  0000 L CNN
+F 1 "Conn_01x03" H 3680 4201 50  0000 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x03_P2.00mm_Vertical" H 3600 4250 50  0001 C CNN
+F 3 "~" H 3600 4250 50  0001 C CNN
+	1    3600 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J11
+U 1 1 60AA85BE
+P 3600 4725
+F 0 "J11" H 3680 4767 50  0000 L CNN
+F 1 "Conn_01x03" H 3680 4676 50  0000 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x03_P2.00mm_Vertical" H 3600 4725 50  0001 C CNN
+F 3 "~" H 3600 4725 50  0001 C CNN
+	1    3600 4725
+	1    0    0    -1  
+$EndComp
+Text GLabel 3400 4825 0    60   Input ~ 0
+Hall_P
+$Comp
+L power:GND #PWR0101
+U 1 1 60AA9E45
+P 3400 5025
+F 0 "#PWR0101" H 3400 4775 50  0001 C CNN
+F 1 "GND" V 3400 4825 50  0000 C CNN
+F 2 "" H 3400 5025 50  0000 C CNN
+F 3 "" H 3400 5025 50  0000 C CNN
+	1    3400 5025
+	0    1    -1   0   
+$EndComp
+Text GLabel 3400 5125 0    60   Input ~ 0
+Hall_MB_S
+$Comp
+L Connector_Generic:Conn_01x03 J12
+U 1 1 60AAA552
+P 3600 5125
+F 0 "J12" H 3680 5167 50  0000 L CNN
+F 1 "Conn_01x03" H 3680 5076 50  0000 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x03_P2.00mm_Vertical" H 3600 5125 50  0001 C CNN
+F 3 "~" H 3600 5125 50  0001 C CNN
+	1    3600 5125
+	1    0    0    -1  
+$EndComp
+Text GLabel 3400 5225 0    60   Input ~ 0
+Hall_P
+$Comp
+L power:GND #PWR0102
+U 1 1 60AAEE77
+P 3400 5425
+F 0 "#PWR0102" H 3400 5175 50  0001 C CNN
+F 1 "GND" V 3400 5225 50  0000 C CNN
+F 2 "" H 3400 5425 50  0000 C CNN
+F 3 "" H 3400 5425 50  0000 C CNN
+	1    3400 5425
+	0    1    -1   0   
+$EndComp
+Text GLabel 3400 5525 0    60   Input ~ 0
+Hall_MC_S
+$Comp
+L Connector_Generic:Conn_01x03 J13
+U 1 1 60AAF5A8
+P 3600 5525
+F 0 "J13" H 3680 5567 50  0000 L CNN
+F 1 "Conn_01x03" H 3680 5476 50  0000 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x03_P2.00mm_Vertical" H 3600 5525 50  0001 C CNN
+F 3 "~" H 3600 5525 50  0001 C CNN
+	1    3600 5525
+	1    0    0    -1  
+$EndComp
+Text GLabel 3400 5625 0    60   Input ~ 0
+Hall_P
+Text GLabel 6800 5800 2    60   Input ~ 0
+Hall_P
 $EndSCHEMATC
